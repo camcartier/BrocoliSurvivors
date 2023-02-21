@@ -10,7 +10,6 @@ public class LootControls : MonoBehaviour
     {
         if (collision.CompareTag("Player") && gameObject.tag == "GreenGem")
         {
-            Debug.Log("touched");
             _expCount.value += _lootData._greenGemGivenExpValue;
             Destroy(this.gameObject);
         }
