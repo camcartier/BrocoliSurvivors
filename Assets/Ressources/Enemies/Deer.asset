@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d3e7761292fcf4ab61976c86f9c8a6, type: 3}
   m_Name: Deer
   m_EditorClassIdentifier: 
-  _maxHealth: 15
+  _maxHealth: 35
   _attPower: 15
-  _moveSpeed: 6
+  _moveSpeed: 20

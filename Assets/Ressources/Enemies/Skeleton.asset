@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d3e7761292fcf4ab61976c86f9c8a6, type: 3}
   m_Name: Skeleton
   m_EditorClassIdentifier: 
-  _maxHealth: 20
+  _maxHealth: 50
   _attPower: 20
-  _moveSpeed: 5
+  _moveSpeed: 8

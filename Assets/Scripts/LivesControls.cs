@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ScoreControls : MonoBehaviour
+public class LivesControls : MonoBehaviour
 {
-    [SerializeField] private IntVariables _killCount;
+    [SerializeField] private IntVariables _livesCount;
     private TMP_Text _counterTxt;
     private int _changeTracker;
 
@@ -19,20 +19,18 @@ public class ScoreControls : MonoBehaviour
 
     void Start()
     {
-        _counterTxt.text = ($"{_killCount.value}");
+        _counterTxt.text = ($"{_livesCount.value}");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_killCount.value != _changeTracker)
+        if (_livesCount.value != _changeTracker)
         {
-            _counterTxt.text = ($"{_killCount.value}");
-            _changeTracker = _killCount.value;
+            _counterTxt.text = ($"{_livesCount.value}");
+            _changeTracker = _livesCount.value;
         }
 
 
     }
 }
-
-

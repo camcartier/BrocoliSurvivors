@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class PlayerControls : MonoBehaviour
 {
     private Rigidbody2D _rb2D;
+    private Animator _animator;
     private Vector2 _move;
     private float _horizontal;
     private float _vertical;
@@ -31,6 +32,7 @@ public class PlayerControls : MonoBehaviour
     private void Awake()
     {
         _rb2D= GetComponent<Rigidbody2D>();
+        _animator= GetComponentInChildren<Animator>();
     }
 
     // Start is called before the first frame update
@@ -48,6 +50,12 @@ public class PlayerControls : MonoBehaviour
         {
             Shoot();
         }*/
+
+        if(_rb2D.velocity.x >0 || _rb2D.velocity.y >0 )
+        {
+            _animator.SetBool("walking", true);
+        }
+        else { _animator.SetBool("walking", false); }
 
         if(!_canTakeDamage && _invulnerabiliyTimerCounter < _invulnerabilityTimer)
         {
