@@ -14,6 +14,7 @@ public class PlayerData : ScriptableObject
     public int _attPower;
     public float _attackSpeed;
     public float _attackSize;
+    public float _fireRate;
     [Header("OtherStats")]
     public int _maxLives;
     public int _curseAmount;

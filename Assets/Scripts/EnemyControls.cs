@@ -10,6 +10,7 @@ public class EnemyControls : MonoBehaviour
     private Rigidbody2D _rb2D;
     private Vector2 _direction;
     private GameObject _player;
+    private Animator _animator;
     [Header("HP Management")]
     public int _health;
     public int _currentHP;
@@ -22,6 +23,7 @@ public class EnemyControls : MonoBehaviour
         _currentHP = _health = _enemyData._maxHealth;
 
         _player = GameObject.Find("Player");
+        _animator = GetComponentInChildren<Animator>();
     }
 
     // Start is called before the first frame update
@@ -41,7 +43,7 @@ public class EnemyControls : MonoBehaviour
             //_health= _currentHP;
             StartCoroutine(ColorChangeOnDamage());
         }
-        if(_currentHP<=0) { Death(); }
+        if(_currentHP<=0) { _animator.SetTrigger("death"); }
     }
 
     void FixedUpdate()
@@ -51,7 +53,7 @@ public class EnemyControls : MonoBehaviour
 
     void Move()
     {
-        _rb2D.velocity = _direction * _enemyData._moveSpeed * Time.fixedDeltaTime;
+        _rb2D.velocity = _direction.normalized * _enemyData._moveSpeed * Time.fixedDeltaTime;
     }
 
     void TakeDamage(int damage)
@@ -59,12 +61,13 @@ public class EnemyControls : MonoBehaviour
         _currentHP-= damage;
     }
 
+    /*
     void DestroyEnemy()
     {
         Destroy(this.gameObject);
-    }
+    }*/
 
-    void Death() { _killCount.value += 1;  DestroyEnemy(); }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

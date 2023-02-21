@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84e16c5fa2fb49e4783a3fb468767d7c, type: 3}
-  m_Name: Time
+  m_Name: Timer
   m_EditorClassIdentifier: 
   value: 0

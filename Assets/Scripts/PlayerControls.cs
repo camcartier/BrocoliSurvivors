@@ -14,8 +14,8 @@ public class PlayerControls : MonoBehaviour
     private float _vertical;
 
     private bool _canShoot = true;
-    private float _shootTimer = 5f;
-    private float _shootTimerCounter;
+    //private float _shootTimer = 5f;
+    //private float _shootTimerCounter;
     private bool _canTakeDamage = true;
     private float _invulnerabilityTimer = 1f;
     private float _invulnerabiliyTimerCounter = 0f;
@@ -38,7 +38,7 @@ public class PlayerControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Shoot", 1f, 3f);
+        InvokeRepeating("Shoot", 1f, _playerData._fireRate);
     }
 
     // Update is called once per frame

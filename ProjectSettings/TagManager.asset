@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - PlayerBullet
+  - Loot
+  - GreenGem
+  - BlueGem
+  - RedGem
   layers:
   - Default
   - TransparentFX

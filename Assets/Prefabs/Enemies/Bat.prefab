@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7738312639225709049}
   - component: {fileID: 7016563663148751523}
+  - component: {fileID: 5539906342815169708}
+  - component: {fileID: 5412754537556802893}
   m_Layer: 0
   m_Name: BatGraphics
   m_TagString: Untagged
@@ -84,6 +86,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5539906342815169708
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241102753799034388}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 175da18c27b4df2489ac7e45323305de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &5412754537556802893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241102753799034388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05bcaabedd88df74f81399e151827b27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loot: {fileID: 4303307038937950385, guid: 39cf58120a8f4924c9ee0e726b1ec701, type: 3}
+  _killCount: {fileID: 11400000, guid: b73fc7ecd82a0704e883e813377753bd, type: 2}
 --- !u!1 &7786830685149537195
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +131,7 @@ GameObject:
   - component: {fileID: 2384037701941327249}
   - component: {fileID: 4374705559678322727}
   - component: {fileID: 9094372391639322424}
-  - component: {fileID: 7165171701870170770}
+  - component: {fileID: 8446554650758171895}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Untagged
@@ -157,8 +193,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &7165171701870170770
-BoxCollider2D:
+--- !u!58 &8446554650758171895
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -170,16 +206,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.93111205}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0.99181795}
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.6375537}
-  m_EdgeRadius: 0
+  m_Radius: 0.36217237

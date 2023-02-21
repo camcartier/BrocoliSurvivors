@@ -19,5 +19,6 @@ MonoBehaviour:
   _attPower: 5
   _attackSpeed: 1
   _attackSize: 5
+  _fireRate: 1
   _maxLives: 1
   _curseAmount: 1
