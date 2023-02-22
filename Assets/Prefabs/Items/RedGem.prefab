@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6399070068288702024}
   - component: {fileID: 339502458142482770}
   m_Layer: 0
-  m_Name: GreenGem
+  m_Name: RedGem
   m_TagString: GreenGem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 5787521171141617427}
   - component: {fileID: 7647827714193407522}
   m_Layer: 0
-  m_Name: GGemGraphics
+  m_Name: RGemGraphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,7 +138,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bd3570f64e1b9644bac690fb4581ab76, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

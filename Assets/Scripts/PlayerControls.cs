@@ -16,23 +16,36 @@ public class PlayerControls : MonoBehaviour
     private bool _canShoot = true;
     //private float _shootTimer = 5f;
     //private float _shootTimerCounter;
+    #region take damage infos
     private bool _canTakeDamage = true;
-    private float _invulnerabilityTimer = 1f;
+    private SpriteRenderer _spriteRenderer;
+    private float _redDuration = 0.25f;
+    private float _redDurationCounter;
+    private bool _isRed;
+    private float _invulnerabilityTimer = 0.25f;
     private float _invulnerabiliyTimerCounter = 0f;
+    #endregion
 
+    [Header ("Health")]
     [SerializeField] IntVariables _currentHealth;
+    [SerializeField] IntVariables _livesNumber;
     [SerializeField] PlayerData _playerData;
+
     [SerializeField] GameObject _bulletPrefab;
     [SerializeField] GameObject _canonTop;
     [SerializeField] GameObject _canonBottom;
     [SerializeField] GameObject _canonLeft;
     [SerializeField] GameObject _canonRight;
 
+    private GameObject _gameManager;
+
 
     private void Awake()
     {
         _rb2D= GetComponent<Rigidbody2D>();
         _animator= GetComponentInChildren<Animator>();
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _gameManager = GameObject.Find("GameManager");
     }
 
     // Start is called before the first frame update
@@ -61,11 +74,16 @@ public class PlayerControls : MonoBehaviour
         {
             _invulnerabiliyTimerCounter+= Time.deltaTime;
         }
-        else
+        else { _canTakeDamage = true; _invulnerabiliyTimerCounter = 0f; }
+
+        if (_isRed && _redDurationCounter < _redDuration) { _redDurationCounter += Time.deltaTime; } 
+        else { _isRed = false; _spriteRenderer.color = Color.white; _redDurationCounter = 0; }
+
+        if (_currentHealth.value <= 0)
         {
-            _canTakeDamage = true;
-            _invulnerabiliyTimerCounter = 0f;
+            Death();
         }
+
     }
 
     private void FixedUpdate()
@@ -103,6 +121,9 @@ public class PlayerControls : MonoBehaviour
     private void TakeDamage(int damage)
     {
         _currentHealth.value -= damage;
+        _spriteRenderer.color = Color.red;
+        Debug.Log("red");
+        _isRed = true;
     }
 
     void Shoot()
@@ -114,4 +135,9 @@ public class PlayerControls : MonoBehaviour
         _canShoot = false;
     }
 
+    void Death()
+    {
+        _livesNumber.value -= 1;
+        _gameManager.GetComponent<GameManager>().PauseGame();
+    }
 }

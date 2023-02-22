@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loot: {fileID: 4303307038937950385, guid: 39cf58120a8f4924c9ee0e726b1ec701, type: 3}
   _killCount: {fileID: 11400000, guid: b73fc7ecd82a0704e883e813377753bd, type: 2}
+  _activeEnemies: {fileID: 11400000, guid: 0c7db5eebf8961141a5db89285e3c366, type: 2}
 --- !u!1 &7786830685149537195
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +135,7 @@ GameObject:
   - component: {fileID: 8446554650758171895}
   m_Layer: 0
   m_Name: Bat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
