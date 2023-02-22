@@ -10,6 +10,7 @@ TagManager:
   - GreenGem
   - BlueGem
   - RedGem
+  - Garlic
   layers:
   - Default
   - TransparentFX

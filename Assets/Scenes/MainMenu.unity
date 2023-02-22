@@ -1164,9 +1164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerData: {fileID: 11400000, guid: 3307d6a2f20f8794c8f6024d40544aaf, type: 2}
   _playerHealth: {fileID: 11400000, guid: 605890b92dcaa2444a1db2eb3621598a, type: 2}
-  _scoreCounter: {fileID: 11400000, guid: b73fc7ecd82a0704e883e813377753bd, type: 2}
+  _killCounter: {fileID: 0}
   _livesCounter: {fileID: 11400000, guid: 624401f7f5fcf874183fce2d57108e10, type: 2}
   _timer: {fileID: 11400000, guid: a211b1ad792b0244f91ac1370ba6a4ca, type: 2}
+  _pausePanel: {fileID: 0}
 --- !u!4 &1808095725
 Transform:
   m_ObjectHideFlags: 0
@@ -1259,7 +1260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856316709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13, y: 0, z: 0}
+  m_LocalPosition: {x: -13, y: -9, z: 0}
   m_LocalScale: {x: 12.057318, y: 12.057318, z: 12.057318}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -77,6 +77,15 @@ public class EnemyControls : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Garlic"))
+        {
+            TakeDamage(_playerData._attPower);
+        }
+    }
+
+
     IEnumerator ColorChangeOnDamage()
     {
         _spriterenderer.color = Color.red;

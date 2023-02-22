@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787dd186b985c914eb35ede1ae17caa1, type: 3}
+  m_Name: WeaponsData
+  m_EditorClassIdentifier: 
+  _garlicPower: 1
+  _garlicSize: 1
+  _isActiveGarlic: 0
+  _waterPower: 2
+  _waterSize: 1
+  _waterDuration: 5
+  _isActiveWater: 0
+  _waterNumber: 5
+  _axePower: 2
+  _axeSize: 1
+  _isActiveAxe: 0
+  _axeNumber: 2
+  _thunderPower: 3
+  _isActiveThunder: 0
+  _thunderNumber: 5
