@@ -19,8 +19,8 @@ public class Spawner : MonoBehaviour
     private int _numberToSpawnInit;
     //private int _activeEnemies;
     private int _wave;
-    private bool _hasSpawned;
-    private bool _spawncleared;
+    //private bool _hasSpawned;
+    //private bool _spawncleared;
     [SerializeField] float _timeMaxTillNextSpawn;
 
     public List<GameObject> SpawnZones = new List<GameObject>();
@@ -32,8 +32,8 @@ public class Spawner : MonoBehaviour
         _activeEnemies.value = 0;
 
         _wave = 1;
-        _hasSpawned= false;
-        _spawncleared = false;
+        //_hasSpawned= false;
+        //_spawncleared = false;
     }
     // Start is called before the first frame update
     void Start()
@@ -49,7 +49,7 @@ public class Spawner : MonoBehaviour
         if (_activeEnemies.value == 0)
         {
             Spawn();
-            _hasSpawned = true;   
+            //_hasSpawned = true;   
             _wave++;
         }
 

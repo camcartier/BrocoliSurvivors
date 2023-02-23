@@ -7,11 +7,12 @@ public class DestroyAndSpawnLoot : MonoBehaviour
     [SerializeField] GameObject _loot;
     [SerializeField] IntVariables _killCount;
     [SerializeField] IntVariables _activeEnemies;
-    private LvlUpUgrades _lvlUpUpgrades;
+    private int _nextLevelNumber;
 
     private void Awake()
     {
-        _lvlUpUpgrades = GameObject.Find("UpgradeManager").GetComponent<LvlUpUgrades>();
+        _nextLevelNumber = 10;
+        _killCount.value = 9;
     }
 
     void SpawnLoot()
@@ -33,10 +34,6 @@ public class DestroyAndSpawnLoot : MonoBehaviour
     }
     void ScoreUp() {
         _killCount.value += 1;
-        if (_killCount.value == 10)
-        {
-            _lvlUpUpgrades.GetComponent<LvlUpUgrades>().lvlUp.Invoke();
-        }
 
     }
 

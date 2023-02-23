@@ -38,7 +38,14 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] GameObject _canonRight;
 
     private GameObject _gameManager;
+    private GameObject _upgradeManager;
 
+    #region testing
+    private float timerthunder = 5;
+    private float timerthunderCounter;
+    #endregion
+
+    public WeaponsBehaviour _weaponBehaviour;
 
     private void Awake()
     {
@@ -46,18 +53,24 @@ public class PlayerControls : MonoBehaviour
         _animator= GetComponentInChildren<Animator>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _gameManager = GameObject.Find("GameManager");
+
+        _weaponBehaviour = GameObject.Find("WeaponBehaviour").GetComponent<WeaponsBehaviour>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("Shoot", 1f, _playerData._fireRate);
+
+        //_upgradeManager.GetComponent<WeaponsBehaviour>().HolyWater();
     }
 
     // Update is called once per frame
     void Update()
     {
         GetInput();
+
+
 
         /*if (_canShoot)
         {
@@ -70,20 +83,25 @@ public class PlayerControls : MonoBehaviour
         }
         else { _animator.SetBool("walking", false); }
 
+
         if(!_canTakeDamage && _invulnerabiliyTimerCounter < _invulnerabilityTimer)
         {
             _invulnerabiliyTimerCounter+= Time.deltaTime;
         }
         else { _canTakeDamage = true; _invulnerabiliyTimerCounter = 0f; }
 
+
         if (_isRed && _redDurationCounter < _redDuration) { _redDurationCounter += Time.deltaTime; } 
         else { _isRed = false; _spriteRenderer.color = Color.white; _redDurationCounter = 0; }
+
 
         if (_currentHealth.value <= 0)
         {
             Death();
         }
 
+        //if (timerthunderCounter < timerthunder) { timerthunderCounter += Time.deltaTime; }
+        //else { _upgradeManager.GetComponent<WeaponsBehaviour>().Thunder(); timerthunderCounter = 0; }
     }
 
     private void FixedUpdate()
@@ -132,12 +150,15 @@ public class PlayerControls : MonoBehaviour
         Instantiate(_bulletPrefab, _canonBottom.transform);
         Instantiate(_bulletPrefab, _canonLeft.transform);
         Instantiate(_bulletPrefab, _canonRight.transform);
+        
+        _weaponBehaviour.Upgrade.Invoke();
+
         _canShoot = false;
     }
 
     void Death()
     {
         _livesNumber.value -= 1;
-        _gameManager.GetComponent<GameManager>().PauseGame();
+        _gameManager.GetComponent<GameManager>().SendContinuePanel();
     }
 }

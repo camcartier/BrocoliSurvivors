@@ -6,25 +6,25 @@ using UnityEngine;
 public class WeaponData : ScriptableObject
 {
     [Header("Garlic")]
-    [SerializeField] float _garlicPower;
-    [SerializeField] float _garlicSize;
-    [SerializeField] bool _isActiveGarlic;
+    public int _garlicPower;
+    public float _garlicSize;
+    public bool _isActiveGarlic;
 
     [Header("BlessedWater")]
-    [SerializeField] float _waterPower;
-    [SerializeField] float _waterSize;
-    [SerializeField] float _waterDuration;
-    [SerializeField] bool _isActiveWater;
-    [SerializeField] int _waterNumber;
+    public int _waterPower;
+    public float _waterSize;
+    public float _waterDuration;
+    public bool _isActiveWater;
+    public int _waterNumber;
 
     [Header("Axe")]
-    [SerializeField] float _axePower;
-    [SerializeField] float _axeSize;
-    [SerializeField] bool _isActiveAxe;
-    [SerializeField] int _axeNumber;
+    public int _axePower;
+    public float _axeSize;
+    public bool _isActiveAxe;
+    public int _axeNumber;
 
     [Header("Thunder")]
-    [SerializeField] float _thunderPower;
-    [SerializeField] bool _isActiveThunder;
-    [SerializeField] int _thunderNumber;
+    public int _thunderPower;
+    public bool _isActiveThunder;
+    public int _thunderNumber;
 }

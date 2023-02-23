@@ -10,17 +10,23 @@ public class GameManager : MonoBehaviour
     [SerializeField] private IntVariables _playerHealth;
     [SerializeField] private IntVariables _killCounter;
     [SerializeField] private IntVariables _livesCounter;
-
+    [SerializeField] private IntVariables _expCount;
 
     [SerializeField] private FloatVariables _timer;
     private float _timeElapsed;
 
-    [Header("Pause")]
     private bool _isPaused;
     private bool _isPlaying;
+    [Header("Pause")]
     [SerializeField] GameObject _pausePanel;
 
-    private LvlUpUgrades _lvlUpUpgrades;
+    [Header("Continue")]
+    [SerializeField] GameObject _continuePanel;
+
+    [Header("LevelUp")]
+    [SerializeField] GameObject _levelUpPanel;
+
+    private int _expForNextLevel;
 
     private void Awake()
     {
@@ -29,7 +35,7 @@ public class GameManager : MonoBehaviour
         _killCounter.value = 0;
         _timer.value = 0;
 
-        _lvlUpUpgrades = GameObject.Find("UpgradeManager").GetComponent<LvlUpUgrades>();
+        _expForNextLevel = 5;
     }
 
     // Start is called before the first frame update
@@ -53,10 +59,40 @@ public class GameManager : MonoBehaviour
             _pausePanel.SetActive(true);
         }
 
+        /*
         if (_killCounter.value == 10)
         {
-            _lvlUpUpgrades.GetComponent<LvlUpUgrades>().lvlUp.Invoke();
+            //_lvlUpUpgrades.GetComponent<LvlUpUgrades>().lvlUp.Invoke();
+        }*/
+
+        if (_expCount.value >= _expForNextLevel)
+        {
+            LevelUp();
         }
+
+    }
+
+
+    public void LevelUp()
+    {
+        Time.timeScale = 0;
+        _levelUpPanel.SetActive(true);
+        _expForNextLevel *= 2;
+    }
+
+    public void Revive()
+    {
+        _continuePanel.SetActive(false);
+        _playerHealth.value = _playerData._maxHealth/2;
+        Time.timeScale = 1;
+        _isPaused = false;
+    }
+
+    public void SendContinuePanel()
+    {
+        _continuePanel.SetActive(true);
+        Time.timeScale = 0;
+        _isPaused = true;
     }
 
     public void LoadNextLevel()
@@ -78,10 +114,17 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        Debug.Log("bb");
+        Debug.Log("resume game");
         Time.timeScale = 1;
         _isPaused = false;
-        _pausePanel.SetActive(false);
+        if (_pausePanel.activeSelf)
+        {
+            _pausePanel.SetActive(false);
+        }
+        if (_levelUpPanel.activeSelf)
+        {
+            _levelUpPanel.SetActive(false);
+        }
     }
 
     public void GetToMainMenu()

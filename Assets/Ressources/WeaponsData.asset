@@ -19,7 +19,7 @@ MonoBehaviour:
   _waterSize: 1
   _waterDuration: 5
   _isActiveWater: 0
-  _waterNumber: 5
+  _waterNumber: 3
   _axePower: 2
   _axeSize: 1
   _isActiveAxe: 0

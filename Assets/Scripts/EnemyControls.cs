@@ -7,6 +7,7 @@ public class EnemyControls : MonoBehaviour
     [SerializeField] EnemiesData _enemyData;
     [SerializeField] PlayerData _playerData;
     [SerializeField] IntVariables _killCount;
+    [SerializeField] WeaponData _weaponData;
     private Rigidbody2D _rb2D;
     private Vector2 _direction;
     private GameObject _player;
@@ -77,11 +78,11 @@ public class EnemyControls : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Garlic"))
         {
-            TakeDamage(_playerData._attPower);
+            TakeDamage(_playerData._attPower * _weaponData._garlicPower);
         }
     }
 

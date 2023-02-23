@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.2971698, g: 0.7380356, b: 1, a: 0.6862745}
+  m_Color: {r: 0.4292453, g: 0.8498014, b: 1, a: 0.43137255}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198346633343688043}
   - component: {fileID: 5884767775381656075}
+  - component: {fileID: 5219180645577927705}
   m_Layer: 0
   m_Name: WaterFX
   m_TagString: Untagged
@@ -133,3 +134,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.73
+--- !u!114 &5219180645577927705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5160484223113592791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69f9191bd9fc884fa7d9ef9d3f7b8f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

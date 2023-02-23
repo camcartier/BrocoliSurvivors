@@ -171,6 +171,7 @@ MonoBehaviour:
   _enemyData: {fileID: 11400000, guid: c9e082cb3b4f4aa438c15d49646e6125, type: 2}
   _playerData: {fileID: 11400000, guid: 3307d6a2f20f8794c8f6024d40544aaf, type: 2}
   _killCount: {fileID: 11400000, guid: b73fc7ecd82a0704e883e813377753bd, type: 2}
+  _weaponData: {fileID: 11400000, guid: 93a38231854001f44b3fbd8fb273e1e4, type: 2}
   _health: 0
   _currentHP: 0
 --- !u!50 &9094372391639322424

@@ -11,6 +11,8 @@ TagManager:
   - BlueGem
   - RedGem
   - Garlic
+  - Boundaries
+  - Axe
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - Enemies
   - Player
   - PlayerBullet
-  - 
+  - Weapons
   - 
   - 
   - 
