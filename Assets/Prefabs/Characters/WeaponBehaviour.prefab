@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &218716642174959916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 218716642174959914}
+  - component: {fileID: 218716642174959915}
+  m_Layer: 0
+  m_Name: WeaponBehaviour
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &218716642174959914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218716642174959916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.660086, y: 7.78652, z: 4105.692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &218716642174959915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218716642174959916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80eb225ae6ab4ed4fbab59b5c2a47596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponData: {fileID: 11400000, guid: 93a38231854001f44b3fbd8fb273e1e4, type: 2}
+  _garlicFX: {fileID: 9217536071793019990, guid: b205e198f76503e4daf1ef551233d75e, type: 3}
+  _activateGarlic: 0
+  _waterFx: {fileID: 5160484223113592791, guid: 8c0a3d711ef946d40bced654a02f1589, type: 3}
+  _activateWater: 0
+  _axeFX: {fileID: 5159603182861605290, guid: 446b5ec2bfcdc6f4598f0c73653acf44, type: 3}
+  _thunderFX: {fileID: 5339998010539464499, guid: b50000dd031e1e046b3dee9c77d7783f, type: 3}
+  Upgrade:
+    m_PersistentCalls:
+      m_Calls: []

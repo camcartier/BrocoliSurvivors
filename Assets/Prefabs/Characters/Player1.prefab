@@ -83,13 +83,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHealth: {fileID: 11400000, guid: 605890b92dcaa2444a1db2eb3621598a, type: 2}
-  _livesNumber: {fileID: 0}
+  _livesNumber: {fileID: 11400000, guid: 624401f7f5fcf874183fce2d57108e10, type: 2}
   _playerData: {fileID: 11400000, guid: 3307d6a2f20f8794c8f6024d40544aaf, type: 2}
+  _weaponData: {fileID: 11400000, guid: 93a38231854001f44b3fbd8fb273e1e4, type: 2}
   _bulletPrefab: {fileID: 4866778947595108801, guid: 1e286883b348c2a4f9d861e059e37841, type: 3}
   _canonTop: {fileID: 9006041003507512995}
   _canonBottom: {fileID: 2329108106984587686}
   _canonLeft: {fileID: 4245764252198509991}
   _canonRight: {fileID: 5356333323145576395}
+  _weaponBehaviour: {fileID: 0}
 --- !u!50 &7155498738341063341
 Rigidbody2D:
   serializedVersion: 4

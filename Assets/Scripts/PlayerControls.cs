@@ -30,12 +30,17 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] IntVariables _currentHealth;
     [SerializeField] IntVariables _livesNumber;
     [SerializeField] PlayerData _playerData;
+    [SerializeField] WeaponData _weaponData;
 
+    [Header("Shooting")]
     [SerializeField] GameObject _bulletPrefab;
     [SerializeField] GameObject _canonTop;
     [SerializeField] GameObject _canonBottom;
     [SerializeField] GameObject _canonLeft;
     [SerializeField] GameObject _canonRight;
+
+    [Header("boolWeapons")]
+    public bool _garlicActivated;
 
     private GameObject _gameManager;
     private GameObject _upgradeManager;
@@ -45,6 +50,7 @@ public class PlayerControls : MonoBehaviour
     private float timerthunderCounter;
     #endregion
 
+    [HideInInspector]
     public WeaponsBehaviour _weaponBehaviour;
 
     private void Awake()

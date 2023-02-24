@@ -1246,10 +1246,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
@@ -1257,7 +1261,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1728867100}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1001346871}
+    - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
@@ -1265,16 +1277,28 @@ PrefabInstance:
       value: ButtonAxe
       objectReference: {fileID: 0}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: WeaponsBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8034830704205321788, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_Name
-      value: UpgradeButton1
+      value: UpgradeButtonAxe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
@@ -5164,14 +5188,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1728867100}
+    - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1001346871}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
@@ -5179,20 +5211,36 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HolyWater
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ResumeGame
       objectReference: {fileID: 0}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WeaponsBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3222993624125824507, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8034830704205321788, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
       propertyPath: m_Name
-      value: UpgradeButton2
+      value: UpgradeButtonWater
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e83820e846c8144a0c1e050d27f1e9, type: 3}
