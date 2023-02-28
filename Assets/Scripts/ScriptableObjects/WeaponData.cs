@@ -22,6 +22,7 @@ public class WeaponData : ScriptableObject
     public float _axeSize;
     public bool _isActiveAxe;
     public int _axeNumber;
+    public int _nbCollisionsBeforeDestroy;
 
     [Header("Thunder")]
     public int _thunderPower;

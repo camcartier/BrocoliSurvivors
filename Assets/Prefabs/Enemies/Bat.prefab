@@ -118,7 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05bcaabedd88df74f81399e151827b27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loot: {fileID: 4303307038937950385, guid: 39cf58120a8f4924c9ee0e726b1ec701, type: 3}
+  _commonLoot: {fileID: 4303307038937950385, guid: 27f1a3698c469b849b6b0bc64f109425, type: 3}
+  _rareLoot: {fileID: 4303307038937950385, guid: 39cf58120a8f4924c9ee0e726b1ec701, type: 3}
+  _legendaryLoot: {fileID: 4303307038937950385, guid: 0507c93374b59b147bcb9a1220c0890d, type: 3}
   _killCount: {fileID: 11400000, guid: b73fc7ecd82a0704e883e813377753bd, type: 2}
   _activeEnemies: {fileID: 11400000, guid: 0c7db5eebf8961141a5db89285e3c366, type: 2}
 --- !u!1 &7786830685149537195

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private IntVariables _killCounter;
     [SerializeField] private IntVariables _livesCounter;
     [SerializeField] private IntVariables _expCount;
+    [SerializeField] private IntVariables _levelTracker;
 
     [SerializeField] private FloatVariables _timer;
     private float _timeElapsed;
@@ -32,7 +33,9 @@ public class GameManager : MonoBehaviour
     {
         _playerHealth.value = _playerData._maxHealth;
         _livesCounter.value = _playerData._maxLives;
+        _levelTracker.value = 0;
         _killCounter.value = 0;
+        _expCount.value = 0;
         _timer.value = 0;
 
         _expForNextLevel = 5;
@@ -68,6 +71,8 @@ public class GameManager : MonoBehaviour
         if (_expCount.value >= _expForNextLevel)
         {
             LevelUp();
+            _levelTracker.value += 1;
+            
         }
 
     }
@@ -78,6 +83,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         _levelUpPanel.SetActive(true);
         _expForNextLevel *= 2;
+        Debug.Log(_expForNextLevel);
     }
 
     public void Revive()
@@ -98,6 +104,10 @@ public class GameManager : MonoBehaviour
     public void LoadNextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
     }
 
     public void Quit()

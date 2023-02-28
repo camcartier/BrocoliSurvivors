@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 2766545599134298182}
   m_Layer: 0
   m_Name: GarlicFX
-  m_TagString: Untagged
+  m_TagString: Garlic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

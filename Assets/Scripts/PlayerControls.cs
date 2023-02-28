@@ -38,9 +38,12 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] GameObject _canonBottom;
     [SerializeField] GameObject _canonLeft;
     [SerializeField] GameObject _canonRight;
+    [SerializeField] AudioSource _fireSound;
 
     [Header("boolWeapons")]
     public bool _garlicActivated;
+    public bool _waterActivated;
+    public bool _thunderActivated;
 
     private GameObject _gameManager;
     private GameObject _upgradeManager;
@@ -156,7 +159,8 @@ public class PlayerControls : MonoBehaviour
         Instantiate(_bulletPrefab, _canonBottom.transform);
         Instantiate(_bulletPrefab, _canonLeft.transform);
         Instantiate(_bulletPrefab, _canonRight.transform);
-        
+        _fireSound.Play();
+
         _weaponBehaviour.Upgrade.Invoke();
 
         _canShoot = false;

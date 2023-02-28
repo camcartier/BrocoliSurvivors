@@ -24,6 +24,7 @@ MonoBehaviour:
   _axeSize: 1
   _isActiveAxe: 0
   _axeNumber: 2
+  _nbCollisionsBeforeDestroy: 2
   _thunderPower: 3
   _isActiveThunder: 0
   _thunderNumber: 5

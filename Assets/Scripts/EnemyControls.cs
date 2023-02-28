@@ -76,6 +76,10 @@ public class EnemyControls : MonoBehaviour
         {
             TakeDamage(_playerData._attPower);
         }
+        if (collision.collider.CompareTag("Axe"))
+        {
+            TakeDamage(_playerData._attPower* _weaponData._axePower);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -83,6 +87,10 @@ public class EnemyControls : MonoBehaviour
         if (collision.CompareTag("Garlic"))
         {
             TakeDamage(_playerData._attPower * _weaponData._garlicPower);
+        }
+        if (collision.CompareTag("Water"))
+        {
+            TakeDamage(_playerData._attPower * _weaponData._waterPower);
         }
     }
 

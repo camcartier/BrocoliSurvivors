@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class DestroyAndSpawnLoot : MonoBehaviour
 {
-    [SerializeField] GameObject _loot;
+    [Header("Loots")]
+    [SerializeField] GameObject _commonLoot;
+    [SerializeField] GameObject _rareLoot;
+    [SerializeField] GameObject _legendaryLoot;
+    [Header("Enemies")]
     [SerializeField] IntVariables _killCount;
     [SerializeField] IntVariables _activeEnemies;
-    private int _nextLevelNumber;
+
+    private List<GameObject> ListOfPossibleLoot = new List<GameObject>();
 
     private void Awake()
     {
-        _nextLevelNumber = 10;
-        _killCount.value = 9;
+        ListOfPossibleLoot.Clear();
     }
 
     void SpawnLoot()
     {
-        Instantiate(_loot, transform.position, Quaternion.identity);
+        //la liste servira plus tard
+        ListOfPossibleLoot.Add(_commonLoot); ListOfPossibleLoot.Add(_rareLoot); ListOfPossibleLoot.Add(_legendaryLoot);
+        Instantiate(_commonLoot, transform.position, Quaternion.identity);
     }
 
     void DestroyGameObject()

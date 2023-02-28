@@ -53,6 +53,7 @@ public class WeaponsBehaviour : MonoBehaviour
 
     public void HolyWater()
     {
+        Debug.Log("water");
         List<GameObject> collectedwaters = new List<GameObject>();
         for (int i = 0; i<_weaponData._waterNumber; i++)
         {
