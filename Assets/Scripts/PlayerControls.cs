@@ -139,10 +139,8 @@ public class PlayerControls : MonoBehaviour
         if (_canTakeDamage && collision.collider.CompareTag("Enemy"))
         {
             TakeDamage(10);
-            
-            _canTakeDamage= false;
+            _canTakeDamage = false;
         }
-
     }
 
     private void TakeDamage(int damage)

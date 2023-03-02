@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -29,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     public int _expForNextLevel = 5;
 
+    private ExpSlider _expSlider;
+
     private void Awake()
     {
         _playerHealth.value = _playerData._maxHealth;
@@ -39,12 +42,13 @@ public class GameManager : MonoBehaviour
         _timer.value = 0;
 
         _expForNextLevel = 5;
+        _expSlider = GameObject.Find("Slider").GetComponent<ExpSlider>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _expSlider.SetMaxExp(_expForNextLevel);
     }
 
     // Update is called once per frame
@@ -83,6 +87,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         _levelUpPanel.SetActive(true);
         _expForNextLevel *= 2;
+        _expSlider.SetMaxExp(_expForNextLevel);
         Debug.Log(_expForNextLevel);
     }
 

@@ -11,6 +11,8 @@ public class AxeBehaviour : MonoBehaviour
     private float _forceY;
     private Rigidbody2D _rb2D;
 
+    private int _numberOfCollisions;
+
     [SerializeField] WeaponData _weaponData;
 
     private void Awake()
@@ -29,7 +31,19 @@ public class AxeBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_numberOfCollisions > _weaponData._nbCollisionsBeforeDestroy)
+        {
+            Destroy(gameObject);
+        }
+
         //Transform.Rotate(gameObject, );
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Enemy"))
+        {
+            _numberOfCollisions++;
+        }
+    }
 }

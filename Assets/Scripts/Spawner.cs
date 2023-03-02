@@ -20,48 +20,69 @@ public class Spawner : MonoBehaviour
     private int _numberToSpawnInit;
     //private int _activeEnemies;
     private int _wave;
-    //private bool _hasSpawned;
+    private bool _hasSpawned;
     //private bool _spawncleared;
     [SerializeField] float _timeMaxTillNextSpawn;
 
     [SerializeField] float _maxEnemyLimitInTime;
-    private float _timeRemainingBeforeIncrease;
+    private float _timeRemainingBeforeIncrease = 10;
+    private float _timerRemainingCounter;
 
     public List<GameObject> SpawnZones = new List<GameObject>();
 
     private void Awake()
     {
-        _numberToSpawnInit = 40;
+        _numberToSpawnInit = 20;
         _numberToSpawn= _numberToSpawnInit * _wave;
         _activeEnemies.value = 0;
 
         _wave = 1;
-        //_hasSpawned= false;
         //_spawncleared = false;
     }
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(_numberToSpawn);
+        Spawn();
         StartCoroutine(ContinuousSpawn());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
-        if (_activeEnemies.value <10)
+        /*
+        if (_wave == 1)
         {
             Spawn();
             //_hasSpawned = true;   
-            _wave++;
+            //_wave++;
+        }*/
+        if(_timeRemainingBeforeIncrease > _timerRemainingCounter)
+        {
+            _timerRemainingCounter += Time.deltaTime;
+        }
+        else { _timerRemainingCounter = 0; }
+
+
+        if(_hasSpawned && _timeRemainingBeforeIncrease < _timerRemainingCounter)
+        {
+            Spawn();
+            _timeRemainingBeforeIncrease *= 2;
         }
 
+        if (_activeEnemies.value <10 && !_hasSpawned)
+        {
+            Spawn();
+            //_hasSpawned = true;   
+            //_wave++;
+        }
+
+        /*
         if (_timeRemainingBeforeIncrease < Time.deltaTime)
         {
             //Spawn2();
             _timeRemainingBeforeIncrease *= 2;
-        }
+        }*/
         //_activeEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
 
@@ -69,6 +90,7 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
+        Debug.Log("spawn");
         _numberToSpawn = (_numberToSpawnInit * _wave)/2;
         GameObject _leftspawn = SpawnZones[0];
         GameObject _rightSpawn  = SpawnZones[1];
@@ -81,6 +103,8 @@ public class Spawner : MonoBehaviour
         }
 
         _activeEnemies.value = _numberToSpawn;
+        _wave++;
+        _hasSpawned = true;
         //Debug.Log($"{_activeEnemies}");
     }
 
@@ -88,7 +112,7 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(10);
             int _continuousSpawnNumber = ((_numberToSpawnInit * _wave) / 2);
             GameObject _leftspawn = SpawnZones[0];
             GameObject _rightSpawn = SpawnZones[1];

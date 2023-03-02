@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _healthRecovery: 0.1
-  _moveSpeed: 130
+  _moveSpeed: 180
   _armor: 1
   _attPower: 5
   _attackSpeed: 1

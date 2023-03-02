@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class EnemyControls : MonoBehaviour
 {
+    [Header("Data")]
     [SerializeField] EnemiesData _enemyData;
     [SerializeField] PlayerData _playerData;
     [SerializeField] IntVariables _killCount;
     [SerializeField] WeaponData _weaponData;
+
     private Rigidbody2D _rb2D;
     private Vector2 _direction;
     private GameObject _player;
     private Animator _animator;
+
     [Header("HP Management")]
     public int _health;
     public int _currentHP;
     private SpriteRenderer _spriterenderer;
+
+    [Header("Damage Management")]
+    public bool _canDamage;
 
     private void Awake()
     {
