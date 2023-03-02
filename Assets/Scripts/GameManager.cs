@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     [Header("LevelUp")]
     [SerializeField] GameObject _levelUpPanel;
 
-    private int _expForNextLevel;
+    public int _expForNextLevel = 5;
 
     private void Awake()
     {

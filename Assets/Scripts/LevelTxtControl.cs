@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ExpTxtControl : MonoBehaviour
+public class LevelTxtControl : MonoBehaviour
 {
-    [SerializeField] private IntVariables _expCount;
+    [SerializeField] private IntVariables _levelTracker;
     private TMP_Text _expTxt;
     private int _changeTracker;
 
@@ -19,18 +19,16 @@ public class ExpTxtControl : MonoBehaviour
 
     void Start()
     {
-        _expTxt.text = ($"{_expCount.value}");
+        _expTxt.text = ("Lvl " +_levelTracker.value);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_expCount.value != _changeTracker)
+        if (_levelTracker.value != _changeTracker)
         {
-            _expTxt.text = ($"{_expCount.value}");
-            _changeTracker = _expCount.value;
+            _expTxt.text = ("Lvl " + _levelTracker.value);
+            _changeTracker = _levelTracker.value;
         }
-
-
     }
 }
